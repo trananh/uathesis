@@ -1,0 +1,49 @@
+# This Makefile uses the program "rubber" to 
+# implement Latex dependencies instead of GNU Make:
+# http://www.pps.jussieu.fr/~beffara/soft/rubber/ 
+# You can download and install this program to use
+# this Makefile, which is functionally equivalent
+# to Makefile.  Or, just use "rubber" at the 
+# command line to create your files.  The 
+# advantage to "Makefile" is that interdependencies 
+# between Latex source files (*.tex files) are handled
+# automatically.  Of course, both this and Makefile
+# are completely optional as far as the dissertation
+# template is concerned.  You are free to just use
+# Latex manually.
+#
+# Created by Curtis Cooper
+# Last Modified: 03/20/06
+
+RUBBER	= rubber
+PS_VIEWER = gv
+PDF_VIEWER = acroread
+
+all: 
+	$(RUBBER) --ps special_abstract.tex
+	$(RUBBER) -vv --ps dissertation.tex
+
+pdf:
+	$(RUBBER) --pdf special_abstract.tex
+	$(RUBBER) -vv --post=dvipdfm dissertation.tex
+
+view: all
+	$(PS_VIEWER) dissertation.ps &
+
+show: view
+
+view_pdf: pdf
+	$(PDF_VIEWER) dissertation.pdf &
+
+show_pdf: view_pdf
+
+clean:
+	$(RUBBER) --ps --pdf --clean special_abstract.tex
+	$(RUBBER) --ps --pdf --clean dissertation.tex
+
+realclean: clean
+	/bin/rm -f *~
+
+clobber: realclean
+
+.PHONY: all pdf view show view_pdf show_pdf clean realclean clobber

@@ -1,0 +1,133 @@
+% Sample Dissertation, Thesis, or Document %
+%            for use with the              %
+%  University of Arizona Thesis Class,     %
+%               uathesis.cls               %
+%------------------------------------------%
+
+% We'll use the uathesis document class (duh).  The uncommented line
+% below will produce a Dissertation, the others would produce a Thesis
+% or a Document.  There are other options available to you like turning
+% on the copyright statement and replacing the year on the title page
+% with a "generated on" stamp (handy for early drafts).  To find out
+% what the available options are, take a look into the uathesis.cls
+% file and look for the \DeclareOption commands near the top of that
+% file.
+% There are five copyright options.  Copyright, no copyright, and three
+% different Creative Commons licences.  Use the one you want (If you go
+% Creative Commons, I (DM) think the CC-BY-ND makes the most sense)  See
+% uathesis.cls for the reason why the non-commercial licenses are not
+% included.
+%\documentclass[dissertation]{uathesis}
+%\documentclass[dissertation,copyright]{uathesis}
+%\documentclass[dissertation,CC-BY]{uathesis}
+%\documentclass[dissertation,CC-BY-SA]{uathesis}
+\documentclass[dissertation,CC-BY-ND]{uathesis}
+%\documentclass[dissertation,generatedon]{uathesis}
+%\documentclass[thesis]{uathesis}
+%\documentclass[document]{uathesis}
+
+% Package Usage
+% These are the packages that we need
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage[ruled,boxed,noend]{algorithm2e}
+\usepackage{graphicx}
+\usepackage{natbib}			% natbib is available on most systems, and is
+					% terribly handy.
+					% If you want to use a different Bibliography package, 
+					% you should be able to, just change this
+					% and the \bibliographystyle command below.  Be warned
+					% that you may need to do a little hacking to get
+					% the REFERENCES item to show up in your TOC.
+
+% Compatibility with the AASTEX package 
+% of the American Astronomical Society.
+%\usepackage{deluxetable}		% Allows use of AASTEX deluxe tables
+%\usepackage{aastex_hack}		% Allows other AASTEX functionality.
+
+% These are other packages that you might find useful.
+% For controlling the fonts, see
+% http://www.math.uiuc.edu/~hartke/computer/latex/survey/survey.html
+% The following is a nice font set:
+%\usepackage{mathtime}			% Times for letters; Belleek math.
+%
+%\usepackage{amsmath}			% AMS Math (advanced math typesetti`ng)
+%\usepackage{lscape}			% Used for making fitting large tables in by putting them landscape
+%\usepackage{refs}			
+%
+% If you are using hyper-ref (recommended), this command must go after all 
+% other package inclusions (from the hyperref package documentation).
+% The purpose of hyperref is to make the PDF created extensively
+% cross-referenced.
+\usepackage[bookmarks,colorlinks=true,urlcolor=black,linkcolor=black,citecolor=black]{hyperref}
+
+
+% Set up some values.
+\completetitle{My Lovely Dissertation}
+\fullname{Bob Bob Loblaw} % Grad college wants your full name here.
+\degreename{Doctor of Philosophy}	% Title of your degree.
+
+\begin{document}
+
+% Set up the title page
+\maketitlepage
+{DEPARTMENT OF COMPUTER SCIENCE}	% Title of your department.
+{2013}							
+
+% Insert the approval form.  Note that for electronic submission
+% of your Ph. D. dissertation, you must bring *two* copies of the
+% approval page to your final defense.  These must be signed by
+% the committee.  Make two photocopies: one for Pam and the othe		r
+% for your records.  Then, bring the two signed originals to the
+% graduate college when you submit the final version of the
+% dissertation to the University of Arizona.
+\approval
+{1 January 1922}		% Defense Date	
+{Arnold Abrams}		% Dissertation Director
+{Billy Boy}		% 1st committee member
+{Carl Crow}		% 2nd committee member
+{Donna Dood}		    % 3rd committee member
+{Edgar Elm} % 4th committee member	
+%{}		% 5th committee member
+
+% Include the ``Statement by Author'' for Dissertations
+\statementbyauthor
+% If this is a Thesis, use the following form, with your thesis director's
+% name and title in the square brackets like so (you should also omit the 
+% approval form insertion above):
+%\statementbyauthor[Jane M. Doe\\Professor of Chemistry]
+
+% Include the ``Acknowledgements''
+\incacknowledgements{acknowledgements}
+
+% Include the ``Dedication''
+\incdedication{dedication}
+
+% Create a ``Table of Contents''
+\tableofcontents
+
+% Create a ``List of Figures''
+\listoffigures
+
+% Create a ``List of Tables''
+\listoftables
+
+% Include the ``Abstract''
+\incabstract{abstract}
+
+% Include the various chapters
+\include{mainmatter/introduction}
+
+% Include the various appendices
+\appendix
+\include{appendix_A}
+
+% Switch the spacing to single-spaced for the references
+\renewcommand{\baselinestretch}{1}		% changing the value
+\small\normalsize										% switch size to make the value take
+
+% Create the References list
+\bibliographystyle{uabibnat}
+\bibliography{bibliography}
+
+\end{document}

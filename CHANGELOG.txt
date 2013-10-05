@@ -1,0 +1,109 @@
+Changes
+
+Okay, we probably should have started this earlier.  If you already have your
+dissertation half-written with a previous version of the template, see the
+sections labeled TRANSITION: below.
+
+
+August 2004
+
+	It was working.
+
+
+8 June 2005
+
+	Grad College has allowed electronic submission (you lucky !@#$%), so
+	naturally some things have changed.  Many instances of bolding have
+	been removed.
+
+	Instead of a completely dummy Committee Approval page (page 2), we
+	have set it up to print out a page ready for signing (and more
+	importantly electronically including).  Since now both the title page
+	and the Approval page have things like your name, the title, and the
+	degree name, we have separated those out, and altered the template so
+	you only have to enter them once.
+
+	TRANSITION: Use the new class file.  There are changes to
+	dissertation.tex: there are now three "variable"-like things for you
+	to fill out: \completetitle{}, \fullname{}, and \degreename{};
+	\maketitlepage and \approval have changed; and there are now some
+	commands to go to single-spacing before the bibliography commands.
+	Everything else should be the same.
+
+
+23 August 2005
+
+	Terry had \part level commands in his dissertation.  In all of the
+	work we had done on the class file, we overlooked the \part level
+	commands because we thought they wouldn't be used much.  So Terry
+	figured out how to fix up those commands in the same way we had hacked
+	the \chapter commands, so that all the relevant \part stuff is
+	consistently formatted to Grad College specifications--thanks Terry.
+
+	TRANSITION: If you do not have \part level commands in your
+	dissertation, you can totally ignore this change.  If you do, only the
+	uathesis.cls file has changed.
+
+22 February 2006
+
+	I put in commands to generate a hyperref-style PDF, which is heavily
+	cross-referenced.  This is based on what Moses Milazzo did.  The
+	Makefile handles the generation of the PDF files of the
+	special_abstract and dissertation via the commands 'make pdf.'  To
+	show the pdf of the dissertation, type 'make view_pdf' or 'make
+	show_pdf'.  If you want to remove hyperref, or use different options,
+	see the line \usepackage[...]{hyperref} in dissertation.tex.
+
+	I have also added deluxetable.sty and aastex_hack.sty to the template,
+	which have allowed me to use AASTEX features such as deluxe tables
+	(rather than Latex's tabular environment) to typeset tables.  This was
+	a major benefit, as I had already typeset these tables in AASTEX
+	format for my Astrophysical Journal articles.  - Curtis Cooper
+
+20 March 2006
+
+	I added the grad college's manual for electronic submission of your
+	dissertation: ETD_Diss_Manual.pdf.  I also added Makefile_alternate,
+	which uses "rubber" instead of GNU Make to calculate interdependencies
+	between Latex sources:
+
+	http://www.pps.jussieu.fr/~beffara/soft/rubber/
+
+7 January 2009
+   DAVID MINTON: A few things have been cleaned up.  The graduate college
+   no longer requires spaces between the numbers of the year on the title
+   page.  If you are using an old template, this should be the only change
+   you need to make in the main dissertation file (dissertation.tex).  All 
+	other changes were made to the uathesis.cls file.
+
+   Some minor rewording of the Approval Form and Statement by Author to match
+	the current grad college examples.  Also, for electronic dissertations, the 
+	Statement by Author now has the typed name instead of a line for a signature 
+	(this does not	appear to be the case for the Master Thesis for some reason). 
+
+	Support has now been added for 3 flavors of Creative Commons licenses. 
+	While trying to get the hyperlink to the CC license website in the 
+	Statement by Author page to work, I ended up rewriting the call to the
+	hyperref package.  I also threw out the old Makefile and used my own. 
+	
+	Based on the TODO I attempted to figure out the footskip issue.  This is
+	supposed to be the distance between the bottom of text and the bottom of 
+	the footnotes, but changing this value seems to have absolutely no 
+	effect on the document.  This does not appear to be a critical issue, so
+	I leave this oddity to future troubleshooters.  I have left in my 
+	testing footnote on the first page of Chapter 1.
+
+3 July 2013
+
+	Added new template for proposals (e.g. dissertation/thesis proposal).  A
+	proposal uses basically the same format as a thesis, except for minor formatting
+	differences.  A proposal does not use chapters, so chapters are treated similarly
+	to sections.  A chapter heading does not say "Chapter", is left-justified, and
+	is not separated into 2 lines.  Also, proposals don't typically have SBA,
+	dedication, or acknowledgement.
+
+	Minor reformatting and rewording of several dissertation forms to match the
+	current graduate college examples.  Also added a template folder to house the
+	'current' example forms from graduate college.  The manual
+	ETD_Diss_Manual.pdf is also updated and moved into the template folder.
+
