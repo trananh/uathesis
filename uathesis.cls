@@ -673,9 +673,9 @@ titled \CompleteTitle~and recommend that it be accepted as fulfilling the
 #6	& 			\\
 	&			\\
 	&			\\
-%	& Date: #1	\\
-%\cline{1-1}
-%#7	& 			\\
+	& Date: #1	\\
+\cline{1-1}
+#7	& 			\\
 \end{tabular*}
 \end{flushleft}
 
