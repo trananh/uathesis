@@ -749,21 +749,21 @@ granted by the copyright holder.}
 {This work is licensed under the Creative Commons Attribution 3.0 
 United States License. To view a copy of this license, visit 
 \href{http://creativecommons.org/licenses/by/3.0/us/}
-{http://creativecommons.org/licenses/by/3.0/us/} or send a letter to 
+{\mbox{http://creativecommons.org/licenses/by/3.0/us/}} or send a letter to 
 Creative Commons, 171 Second Street, Suite 300, San Francisco, 
 California, 94105, USA.} 
 {\ifthenelse{ \boolean{CCBYSA} }
 {This work is licensed under the Creative Commons Attribution-Share 
 Alike 3.0 United States License. To view a copy of this license, visit
 \href{http://creativecommons.org/licenses/by-sa/3.0/us/}
-{http://creativecommons.org/licenses/by-sa/3.0/us/} or send a letter to 
+{\mbox{http://creativecommons.org/licenses/by-sa/3.0/us/}} or send a letter to 
 Creative Commons, 171 Second Street, Suite 300, San Francisco, 
 California, 94105, USA.}
 {\ifthenelse{ \boolean{CCBYND} }
 {This work is licensed under the Creative Commons Attribution-No 
 Derivative Works 3.0 United States License. To view a copy of this 
 license, visit \href{http://creativecommons.org/licenses/by-nd/3.0/us/}
-{http://creativecommons.org/licenses/by-nd/3.0/us/} or send a letter to 
+{\mbox{http://creativecommons.org/licenses/by-nd/3.0/us/}} or send a letter to 
 Creative Commons, 171 Second Street, Suite 300, San Francisco, 
 California, 94105, USA.}
 	{Requests for permission for extended quotation from or reproduction 
