@@ -732,9 +732,9 @@ Dissertation Director: #2	&			\\
 
 
 This \MakeLowercase{\ThesisType} has been submitted in partial
-fulfillment of requirements for an advanced degree at the University
-of Arizona and is deposited in the University Library to be made
-available to borrowers under rules of the Library.
+fulfillment of the requirements for an advanced degree at the
+University of Arizona and is deposited in the University Library
+to be made available to borrowers under rules of the Library.
 
 \bigskip
 
